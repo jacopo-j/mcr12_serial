@@ -80,12 +80,3 @@ class BarcodeScanner(serial.Serial):
         self._send_command(self._build_bin_str(data_bytes))
         self._send_command(self._build_bin_str(self.SAVE_CMD))
 
-
-def main():
-    bcd = BarcodeScanner("/dev/cu.usbmodem1421")
-    bcd.scan(2000)
-    sys.exit()
-
-
-if __name__ == "__main__":
-    main()
